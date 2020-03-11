@@ -75,8 +75,11 @@ class XHProfRuns_Default implements iXHProfRuns {
   }
 
   private function file_name($run_id, $type) {
-
-    $file = "$run_id.$type." . $this->suffix;
+	if($type == $this->suffix) {
+		$file = sprintf("%s.%s", $run_id, $this->suffix);
+	} else {
+		$file = sprintf("%s.%s.%s", $run_id, $type, $this->suffix);
+	}
 
     if (!empty($this->dir)) {
       $file = $this->dir . "/" . $file;
