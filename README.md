@@ -9,6 +9,13 @@ xhprof (or tideways) visualize html tool from [xhprof repo](https://github.com/p
 2. ```$ php -S localhost:8000```
 3. Access http://localhost:8000/?dir={Your xhprof profiling result dir}
 
+## Callgraph
+
+If you want graphing functions for xhprof run:
+
+`sudo apt install graphviz`
+
+
 
 ## Tideways example
 
